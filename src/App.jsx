@@ -22,7 +22,7 @@ const App = () => {
           <input
             type="text"
             placeholder='Enter Notes Heading'
-            className='px-5 w-full outline-none py-2 border-1 rounded'
+            className='px-5 w-full outline-none py-2 border rounded'
             value={headi}
             onChange={(elem) => {
               setHeadi(elem.target.value);
@@ -30,7 +30,7 @@ const App = () => {
           />
           <textarea
             type="text"
-            className='px-5 outline-none w-full h-40 py-2 border-1 rounded'
+            className='px-5 outline-none w-full h-40 py-2 border rounded'
             placeholder='Write Details'
             value={note}
             onChange={(elem) => {
@@ -59,10 +59,10 @@ const App = () => {
             {task.map(function(elem,idx){
               return (<div className='bg-[#f7eed3] border border-black/15 rounded-2xl p-5 shadow-md flex flex-col justify-between min-h-48'>
                 <div>
-                  <h3 className='text-lg font-bold text-black break-words'>
+                  <h3 className='text-lg font-bold text-black wrap-break-wordbreak-words'>
                     {elem.headi}
                   </h3>
-                  <p className='text-sm text-gray-700 mt-2 break-words'>
+                  <p className='text-sm text-gray-700 mt-2 wrap-break-word'>
                     {elem.note}
                   </p>
                 </div>
